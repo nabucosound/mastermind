@@ -16,6 +16,10 @@ class MmindTestCase(unittest.TestCase):
         guess = ['R', 'R', 'R', 'R']
         self.assertRaises(ValueError, Guess, guess)
 
+    def test_invalid_peg_colors(self):
+        guess = ['I', 'N', 'V', 'A']
+        self.assertRaises(ValueError, Guess, guess)
+
 
 if __name__ == '__main__':
     unittest.main()
