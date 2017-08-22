@@ -1,4 +1,5 @@
 import unittest
+from mmind import Guess
 
 
 class MmindTestCase(unittest.TestCase):
@@ -6,6 +7,14 @@ class MmindTestCase(unittest.TestCase):
 
     def setUp(self):
         self.pattern = ['R', 'G', 'B', 'Y']
+
+    def test_invalid_guess_length(self):
+        guess = ['R', 'G']
+        self.assertRaises(ValueError, Guess, guess)
+
+    def test_guess_with_duplicates(self):
+        guess = ['R', 'R', 'R', 'R']
+        self.assertRaises(ValueError, Guess, guess)
 
 
 if __name__ == '__main__':
