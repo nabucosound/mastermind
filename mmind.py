@@ -30,10 +30,14 @@ class Guess:
         for idx, val in enumerate(self.guess):
             if val in self.pattern:
                 if self.pattern[idx] == val:
-                    feedback.append('B')
+                    feedback.append('B')  # Matches color and position!
                 else:
-                    feedback.append('W')
+                    feedback.append('W')  # Matches color only
             else:
-                feedback.append('-')
+                feedback.append('-')  # Peg not used in codebreaker pattern
+
+        # Sort items by black, white and empty values,
+        # to obfuscate feedback for the codebreaker
+        sorted(feedback, key=['B', 'W', '-'].index)
 
         return feedback
