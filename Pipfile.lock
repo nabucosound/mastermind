@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "7a932c1ec918c9473e8121badb57fdbe3503200706a4995d90a130699c9a7996"
+            "sha256": "5ef66ad53b1865156e12b3500427b59e7b28e11548a86abf651e6f0344d4f4cb"
         },
         "requires": {},
         "sources": [
@@ -61,5 +61,18 @@
             "version": "==0.1.7"
         }
     },
-    "develop": {}
+    "develop": {
+        "flake8": {
+            "version": "==3.4.1"
+        },
+        "mccabe": {
+            "version": "==0.6.1"
+        },
+        "pycodestyle": {
+            "version": "==2.3.1"
+        },
+        "pyflakes": {
+            "version": "==1.5.0"
+        }
+    }
 }

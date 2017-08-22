@@ -4,3 +4,6 @@ verify_ssl = true
 
 [packages]
 ipdb = "*"
+
+[dev-packages]
+flake8 = "*"
