@@ -20,6 +20,10 @@ class MmindTestCase(unittest.TestCase):
         guess = ['I', 'N', 'V', 'A']
         self.assertRaises(ValueError, Guess, guess)
 
+    def test_feedback_solved(self):
+        guess = Guess(self.pattern)
+        self.assertEqual(guess.feedback(), ['B', 'B', 'B', 'B'])
+
 
 if __name__ == '__main__':
     unittest.main()
